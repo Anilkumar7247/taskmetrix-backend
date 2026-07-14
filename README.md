@@ -1,20 +1,19 @@
-# TaskFlow 🚀
+# TaskMetrix 🚀
 
 **Production‑Grade Backend‑Only Task Management System**
 
-This repository contains the complete backend for **TaskFlow**, a task management system built using Django, Django REST Framework, PostgreSQL, Redis, Celery, JWT, and Docker.
+This repository contains the complete backend for **TaskMetrix**, a task management system built using Django, Django REST Framework, PostgreSQL, Redis, Celery, JWT.
 
 ---
 
-## 🧠 Why TaskFlow?
+## 🧠 Why TaskMetrix?
 
-TaskFlow is designed to reflect how **real SaaS backends** are built and maintained:
+TaskMetrix is designed to reflect how **real SaaS backends** are built and maintained:
 
 * Explicit API design using `APIView` (no magic ViewSets)
 * Role‑Based Access Control (RBAC)
 * Asynchronous processing with Celery
 * Redis for caching & rate limiting
-* Production‑safe Docker setup
 * Clean separation of concerns (apps, services, permissions, common infra)
 
 ---
@@ -59,21 +58,17 @@ PostgreSQL         Redis
 * **Database**: PostgreSQL
 * **Cache / Broker**: Redis
 * **Async Jobs**: Celery
-* **Server**: Gunicorn
-* **Containerization**: Docker & Docker Compose
 
 ---
 
 ## 📁 Project Structure
 
 ```
-taskflow/
-├── docker-compose.yml
-├── Dockerfile
+taskmetrix/
 ├── requirements.txt
 ├── manage.py
 │
-├── taskflow/              # Core config
+├── taskmetrix/              # Core config
 │   ├── settings.py
 │   ├── urls.py
 │   ├── celery.py
@@ -206,18 +201,6 @@ Celery workers run independently from API requests, keeping response times low.
 * `POST /api/tasks/{id}/status/`
 * `POST /api/tasks/{id}/comments/`
 
----
-
-## 🐳 Docker Setup
-
-### Run the project
-
-```
-docker-compose up --build
-docker-compose exec web python manage.py migrate
-docker-compose exec web python manage.py createsuperuser
-```
-
 Services:
 
 * Django API
@@ -238,4 +221,4 @@ Services:
 
 ---
 
-**Author**: Senior Backend Engineer (Python / Django)
+**Author**: Junior Python Developer (Python / Django)
